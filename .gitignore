@@ -28,3 +28,12 @@ dist/
 
 # Jupyter
 .ipynb_checkpoints/
+
+# Notebook Checkpoints
+**/.ipynb_checkpoints/
+
+# Local Databases (optional)
+*.db
+*.sqlite
+*.sqlite3
+`
