@@ -10,10 +10,39 @@ def insertMBTARecord(mbtaList):
 
     mycursor = mydb.cursor()
     #complete the following line to add all the fields from the table
-    sql = "insert into mbta_buses ( id, longitude, latitude) values (%s, %s,%s)"
+    sql = """
+            insert into mbta_buses (
+                id,
+                longitude,
+                latitude,
+                bearing,
+                current_status,
+                current_stop_sequence,
+                direction_id,
+                label,
+                occupancy_status,
+                revenue,
+                speed,
+                updated_at
+            )
+            values (%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s)
+            """
     for mbtaDict in mbtaList:
         #complete the following line to add all the fields from the table
-        val = (mbtaDict['id'], mbtaDict['label'], mbtaDict['longitude'])
+        val = (
+                mbtaDict['id'],
+                mbtaDict['longitude'],
+                mbtaDict['latitude'],
+                mbtaDict['bearing'],
+                mbtaDict['current_status'],
+                mbtaDict['current_stop_sequence'],
+                mbtaDict['direction_id'],
+                mbtaDict['label'],
+                mbtaDict['occupancy_status'],
+                mbtaDict['revenue'],
+                mbtaDict['speed'],
+                mbtaDict['updated_at']
+            )
         mycursor.execute(sql, val)
 
     mydb.commit()

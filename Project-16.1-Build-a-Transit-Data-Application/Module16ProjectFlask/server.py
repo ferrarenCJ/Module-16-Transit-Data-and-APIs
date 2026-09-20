@@ -8,12 +8,13 @@ import MBTAApiClient
 #    BUS LOCATION  
 # ------------------
 
-# Initialize buses list by doing an API call to the MBTA database below
-buses = None
+# Initialize buses list by doing an API call to the MBTA database
+buses = MBTAApiClient.callMBTAApi()
 
 #Update the function below
 def update_data():
-    buses = None
+    global buses
+    buses = MBTAApiClient.callMBTAApi()
 
 def status():
     for bus in buses:

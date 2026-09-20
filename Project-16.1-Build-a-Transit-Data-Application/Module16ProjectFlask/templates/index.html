@@ -20,7 +20,8 @@ var map;
 var markers = [];
 
 // get and add you Mapbox access token at https://account.mapbox.com/ here
-mapboxgl.accessToken = 'your access token here';
+
+mapboxgl.accessToken = MAPBOX_TOKEN;
 
 var map = new mapboxgl.Map({
     container: 'map',

@@ -10,6 +10,9 @@ venv/
 # Environment Variables
 .env
 
+# Local Config
+config.js
+
 # IDE
 .vscode/
 .idea/
@@ -36,4 +39,3 @@ dist/
 *.db
 *.sqlite
 *.sqlite3
-`
